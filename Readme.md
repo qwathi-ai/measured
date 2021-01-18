@@ -1,7 +1,7 @@
 # Measured
 
 <p align="center">
-  <a href="#"><img src="https://github.com/jamangile/measured/blob/media/logo.png?raw=true" alt="Measured - Autocast information into rich data." style="width: 50%;"/></a>
+  <a href="#"><img src="https://github.com/qwathi-ai/measured/blob/media/logo.png?raw=true" alt="Measured - Autocast information into rich data." style="width: 50%;"/></a>
 </p>
 
 > Autocast information into _data points_.
@@ -15,14 +15,14 @@
   <a href="#license">License</a>
 </p>
 <p align="center">
-  <a href="https://travis-ci.com/jamangile/measured">
-    <img src="https://img.shields.io/travis/com/jamangile/measured/master?style=flat-square">
+  <a href="https://travis-ci.com/qwathi-ai/measured">
+    <img src="https://img.shields.io/travis/com/qwathi-ai/measured/master?style=flat-square">
   </a>
-  <a href="https://github.com/jamangile/measured">
-    <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/jamangile/measured?style=flat-square">
+  <a href="https://github.com/qwathi-ai/measured">
+    <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/qwathi-ai/measured?style=flat-square">
   </a>
-  <a href='https://coveralls.io/github/jamangile/measured?branch=master'>
-    <img src='https://coveralls.io/repos/github/jamangile/measured/badge.svg?branch=master' alt='Coverage Status' />
+  <a href='https://coveralls.io/github/qwathi-ai/measured?branch=master'>
+    <img src='https://coveralls.io/repos/github/qwathi-ai/measured/badge.svg?branch=master' alt='Coverage Status' />
   </a>
   <a href="./License.md">
     <img src="https://img.shields.io/badge/License-ISC-blue.svg?maxAge=300&style=flat-square">
