@@ -16,14 +16,15 @@
 </p>
 <p align="center">
   <a href="https://travis-ci.com/qwathi-ai/measured">
-    <img src="https://img.shields.io/travis/com/qwathi-ai/measured/master?style=flat-square">
+    <img src="https://img.shields.io/travis/com/qwathi-ai/measured/main?style=flat-square">
   </a>
   <a href="https://github.com/qwathi-ai/measured">
     <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/qwathi-ai/measured?style=flat-square">
   </a>
-  <a href='https://coveralls.io/github/qwathi-ai/measured?branch=master'>
-    <img src='https://coveralls.io/repos/github/qwathi-ai/measured/badge.svg?branch=master' alt='Coverage Status' />
+  <a href='https://coveralls.io/github/qwathi-ai/measured'>
+    <img src='https://coveralls.io/repos/github/qwathi-ai/measured/badge.svg' alt='Coverage Status' />
   </a>
+
   <a href="./License.md">
     <img src="https://img.shields.io/badge/License-ISC-blue.svg?maxAge=300&style=flat-square">
   </a>
@@ -31,7 +32,7 @@
    <img src="https://img.shields.io/badge/✊-BlackLivesMatter-yellowgreen?style=flat-square">
   </a>
 </p>
-A small, simple and extensible data utility that reads `information` into <u>data</u> points.
+A small, extensible data utility for cleansing string `information` into <u>data</u>.
 
 ## <a name="installation" style="color:#24292e">  Installation</a>
 
