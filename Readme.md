@@ -1,7 +1,7 @@
 # Measured
 
 <p align="center">
-  <a href="#"><img src="https://github.com/qwathi-ai/measured/blob/media/logo.png?raw=true" alt="Measured - Autocast information into rich data." style="width: 50%;"/></a>
+  <a href="#"><img src="https://github.com/qwathi-ai/measured/blob/media/banner.png?raw=true" alt="Measured - Autocast information into rich data." style="width: 50%;"/></a>
 </p>
 
 > Autocast information into _data points_.
