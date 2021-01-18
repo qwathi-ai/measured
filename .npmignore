@@ -1,0 +1,17 @@
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.vscode
+.env
+.env.local
+.env.*.local
+.DS_Store
+.prettierignore
+.travis.yml
+
+.git/
+docs/
+coverage/
+.nyc_output/
+node_modules/

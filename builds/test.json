@@ -1,0 +1,20 @@
+{
+  "extends": "./bundle.json",
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "types": [
+      "@types/chai",
+      "@types/node",
+      "@types/mocha"
+    ]
+  }
+  ,"include":[
+    "../src/**/*.ts"
+  ]
+  ,"exclude": [
+    "../coverage",
+    "../node_modules",
+    "!../node_modules/@types"
+  ]
+}
