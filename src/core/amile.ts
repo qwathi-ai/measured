@@ -5,7 +5,7 @@ export class Amile extends EventEmitter {
   private ws: any
   constructor() {
     super()
-    const ws = new WebSocket(o.options.server)
+    const ws = new WebSocket(/*o.options.server*/ 'ws://localhost:4170/amile')
     ws.onopen = (o) => {
       this.emit('open', o)
     }

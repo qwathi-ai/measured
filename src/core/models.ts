@@ -18,8 +18,8 @@ namespace Models {
     decimalseparator: string[]
     /**Number of digits to appear after the decimal seperator. If the `-1`, then numbers will not be formated. Defaults to -1*/
     decimalplaces: number
-    /**Location of ai web socket server. */
-    server: string
+    // /**Location of ai web socket server. */
+    // server: string
   }
 
   /**

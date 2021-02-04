@@ -10,10 +10,10 @@ const newOptions = {
 } as any
 
 describe('Options', () => {
-  // function
-  before(() => {
-    options.setoptions(newOptions)
-  })
+  // // function
+  // before(() => {
+  //   options.setoptions(newOptions)
+  // })
   it('should be a function', () => {
     expect(options.setoptions).to.be.a('function')
     expect(options.options).to.be.an('object')

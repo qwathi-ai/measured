@@ -144,9 +144,10 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "pre-commit": [
-    "test",
     "clean",
-    "prettify"
+    "prettify",
+    "test",
+    "coverall"
   ],
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",

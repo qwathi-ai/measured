@@ -1,5 +1,4 @@
 import m from './models'
-import h from './helpers'
 
 /**
  * @internal
@@ -25,8 +24,8 @@ namespace options {
   export const options = Object.create({
     dateformat: ['YYYY-MM-DD'],
     decimalseparator: ['.'],
-    decimalplaces: -1,
-    socket: 'ws://localhost:4170/amile'
+    decimalplaces: -1
+    // socket: 'ws://localhost:4170/amile'
   }) as m.MeasuredOptions
 
   /**
@@ -71,12 +70,17 @@ namespace options {
     }
 
     if (o.decimalplaces) {
-      if (!h.isInteger(o.decimalplaces)) {
+      if (
+        !(
+          typeof o.decimalplaces === 'number' &&
+          Number.isInteger(o.decimalplaces)
+        )
+      ) {
         throw new TypeError(
           `Expected "decimalplaces" property to be a finite integer.`
         )
       }
-      opt.decimalplaces = Number(o.decimalplaces)
+      opt.decimalplaces = o.decimalplaces
     }
 
     if (o.socket) {
