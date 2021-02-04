@@ -7,9 +7,6 @@ package-lock*.json
 .env.local
 .env.*.local
 .DS_Store
-index.html
-coveralls.yml
-debug.js
 
 .git/
 bundle/
@@ -17,3 +14,7 @@ coverage/
 .nyc_output/
 node_modules/
 .measured/
+
+.coveralls.yml
+index.html
+demo.js

@@ -25,7 +25,8 @@ namespace options {
   export const options = Object.create({
     dateformat: ['YYYY-MM-DD'],
     decimalseparator: ['.'],
-    decimalplaces: -1
+    decimalplaces: -1,
+    socket: 'ws://localhost:4170/amile'
   }) as m.MeasuredOptions
 
   /**
@@ -76,6 +77,13 @@ namespace options {
         )
       }
       opt.decimalplaces = Number(o.decimalplaces)
+    }
+
+    if (o.socket) {
+      if (typeof o.socket !== 'string') {
+        throw new TypeError(`Expected "socket" property to be a url string.`)
+      }
+      opt.socket = o.socket
     }
 
     Object.assign(options, opt)

@@ -69,13 +69,22 @@ assert(measured('10.4').symbol === Symbol.for('number'))
 assert(measured('10,4').symbol === Symbol.for('number'))
 ```
 
+### Decimal places
+
+Set the default number of deciaml places, numbers should be formated to.
+
+```js
+measured.setoptions({decimalplaces:3})
+assert(measured('10.4234').value === 10.423)
+```
+
 ## Define
 
-Extend the `@qwathi-ai/measured` by creating your own definition(s). For now, a definition requires three properties.
+Extend `@qwathi-ai/measured` by creating your own definition(s). For now, a definition requires three properties.
 
 * **`name` :** a name for the definition. Accepts both string value and symbols.
-* **`parse`:** a function defining how to process unknown tokens.
-* **`intepretation` :** a function defining if an unknown token can be processed. (The name sounds a bit suspect to me, but let's continue.)
+* **`parse`:** a function defining how to process tokens.
+* **`intepretation` :** a function defining if a token can be processed. (Hmmm....)
 
 ### Create a custom definition
 
@@ -105,15 +114,18 @@ assert(measured('hello world').value === 'how are you doing today, world?')
 
 ## Invoke
 
-A definition can be invoked using either the name or the symbol. It is, however, recommended that a symbol is used to invoke custom definitions.
+A definition can be invoked using either the name or the symbol. It is recommended that a symbol is used to invoke custom definitions.
 
 ```js
 const greeting = measured.invoke(symbolForGreeting, 'hello Jamangile') // recommended
 const greeting2 = measured.invoke(Symbol.for('greeting'), 'hello Jamangile') // works
+const greeting3 = measured.invoke('greeting', 'hello Jamangile') // is converted to Symbol.for('geeting')
 
 assert(greeting.value === 'how are you doing today, Jamangile?')
 assert(greeting.value === greeting2.value)
 assert(greeting.symbol === greeting2.symbol)
+assert(greeting.value === greeting3.value)
+assert(greeting.symbol === greeting3.symbol)
 ```
 
 ## List
@@ -141,7 +153,7 @@ Some helpers functions have been made available.
 
 Checks that a token is a valid date and is with the correct format. `@qwathi-ai/measured` uses [dayjs](https://github.com/iamkun/dayjs) to check against a date format in the following manner.
 
-* Checks string formats exactly match formats listed in [`dateformat`](#date-format) options property. This can be overwritten passing the `dateFormat` argument.
+* Checks string formats exactly match formats listed in [`dateformat`](#date-format) options property. This can be overwritten using the [`setoptions`](#set-options) helper.
 * Checks that the date [is valid](https://github.com/iamkun/dayjs/issues/306).
 
 ```js
@@ -155,7 +167,7 @@ assert(measured.isValidDate('05-21-2020', 'MM-DD-YYYY') === true)
 Validates that a token is a valid finite number.
 
 * Checks decimal seperators match seperators listed in [`decimalseparator`](#decimal-seperator) options property.
-* Checks that number is a valid finite number.
+* Checks that the token is a valid finite number.
 
 ```js
 measured.setoptions({decimalseparator:','})
@@ -168,11 +180,11 @@ Parse a numerical string.
 
 * Checks decimal seperators match seperators listed in [`decimalseparator`](#decimal-seperator) options property.
 * Checks that number is a valid finite number.
-* Applies number of decimal places to response. This is Optional, it can be applied by passing the `decimalPlaces` argument to true.
 
 ```js
-measured.setoptions({decimalseparator:','})
-assert(measured.parseNumber('-10,5') === -10.5)
+measured.setoptions({decimalplaces: 1})
+assert(measured.parseNumber('-10,533') === -10.5)
+assert(measured.parseNumber('-10,533', false) === -10.533)
 ```
 
 ### Parse Date
@@ -181,12 +193,10 @@ Parse a string into a [dayjs](https://github.com/iamkun/dayjs) object.
 
 * Checks string formats exactly match formats listed in [`dateformat`](#date-format) options property.
 * Checks that the date [is valid](https://github.com/iamkun/dayjs/issues/306).
-* Allows for custom [formats](https://day.js.org/docs/en/parse/string-format).
-* Returns dayjs date object
+* Returns [dayjs](https://github.com/iamkun/dayjs) object
 
 ```js
 measured.setoptions({dateformat:['YYYY-MM-DD','MM-DD-YYYY']})
 assert(measured.parseDate('05-21-2020').format('YYYY-MM-DD') === '2020-21-05')
 assert(measured.parseDate('05-21-2020',['YYYY-MM-DD','MM-DD-YYYY']).format('YYYY-MM-DD') === '2020-21-05')
 ```
-

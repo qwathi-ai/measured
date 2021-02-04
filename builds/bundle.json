@@ -3,12 +3,14 @@
     "target": "esnext",
     "module": "esnext",
     "lib": [
-      "ESNext"
+      "ESNext",
+      "dom",
+      "es2015"
     ],
     "declaration": true,
     "removeComments": true,
     "downlevelIteration": true,
-    "outDir": "../bundle",
+    "outDir": "../dist",
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
@@ -23,8 +25,8 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "../src",
     "paths": {
-      "@lib/*": ["lib/*"],
-      "@parsers/*": ["parsers/*"]
+      "@core/*": ["core/*"],
+      "@definitions/*": ["definitions/*"]
     }
   },
   "include": [
@@ -32,7 +34,6 @@
   ],
   "exclude": [
     "../node_modules",
-    "../src/**/*.spec.ts",
-    "../src/debug.ts"
+    "../src/**/*.spec.ts"
   ]
 }

@@ -9,14 +9,17 @@ namespace Models {
    * * **dateformat**:  Date [string format](https://day.js.org/docs/en/parse/string-format) to test dates. Defaults to `YYYY-MM-DD`
    * * **decimalseparator**:  Decimal part separator for numbers. Defaults to `.`
    * * **decimalplaces**: Number of digits to appear after the decimal seperator. If the `-1`, then numbers will not be formated. Defaults to -1
+   * * **server**: Location of ai web socket server.
    */
   export interface MeasuredOptions {
     /**Date [string format](https://day.js.org/docs/en/parse/string-format) to test dates. Defaults to `YYYY-MM-DD` */
     dateformat: string[]
     /**Decimal part separator for numbers. Defaults to `.` */
     decimalseparator: string[]
-    /** Number of digits to appear after the decimal seperator. If the `-1`, then numbers will not be formated. Defaults to -1*/
+    /**Number of digits to appear after the decimal seperator. If the `-1`, then numbers will not be formated. Defaults to -1*/
     decimalplaces: number
+    /**Location of ai web socket server. */
+    server: string
   }
 
   /**

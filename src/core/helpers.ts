@@ -104,16 +104,16 @@ namespace helpers {
    * @ignore
    * @memberof core.helpers
    */
-  export const parseDate = (t: any, dateFormats?: any): Dayjs => {
-    const fmts = dateFormats || o.options.dateformat
+  export const parseDate = (t: any, dateformat?: string[]): Dayjs => {
+    const fmts = dateformat || o.options.dateformat
     if (!isValidDate(t, fmts)) {
       throw new TypeError(`Expected ${t} to be a valid date.`)
     }
     if (isJSDate(t)) {
-      return dayjs(t.toISOString(), fmts)
+      return dayjs(t.toISOString(), fmts as any)
     }
     // console.log(t, fmts, dayjs(t, fmts))
-    return dayjs(t, fmts)
+    return dayjs(t, fmts as any)
   }
 
   /**
@@ -174,12 +174,12 @@ namespace helpers {
    * @ignore
    * @memberof core.helpers
    */
-  export const parseNumber = (t: any, decimalPlaces?: boolean): number => {
+  export const parseNumber = (t: any, decimalplaces?: boolean): number => {
     if (!isValidNumber(t)) {
       throw new TypeError(`Expected ${t} to be a valid finite number.`)
     }
     const places = o.options.decimalplaces
-    const strip = places && places > -1 && decimalPlaces
+    const strip = places && places > -1 && decimalplaces
     let number = t
 
     if (typeof t === 'string' && t.includes(',')) {

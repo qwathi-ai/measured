@@ -20,7 +20,7 @@ jobs:
       if: (tag IS present) and (branch IN (master))
       before_deploy:
       - npm run build
-      - npm run bundle
+      - npm run dist
       deploy:
         provider: npm
         edge: true

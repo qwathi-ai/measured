@@ -1,5 +1,8 @@
 import _ from './core'
 import m from './core/models'
+import amile from './core/amile'
+
+const ai = new amile()
 
 import nothing from './definitions/nothing'
 import bool from './definitions/bool'
@@ -47,6 +50,8 @@ const stack = _.stack.initialize([
 const measured = (token: any): m.MeasuredDatum<unknown> => {
   return _.autocast(stack, token)
 }
+
+measured.ai = ai
 
 /**
  * ## Set Options

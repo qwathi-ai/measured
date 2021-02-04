@@ -21,14 +21,13 @@
   <a href="https://github.com/qwathi-ai/measured">
     <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/qwathi-ai/measured?style=flat-square">
   </a>
-  <a href='https://coveralls.io/github/qwathi-ai/measured'>
-    <img src='https://coveralls.io/repos/github/qwathi-ai/measured/badge.svg' alt='Coverage Status' />
+  <a href='https://coveralls.io/github/qwathi-ai/measured?branch=main'>
+    <img src='https://coveralls.io/repos/github/qwathi-ai/measured/badge.svg?branch=main' alt='Coverage Status' />
   </a>
-
   <a href="./License.md">
     <img src="https://img.shields.io/badge/License-ISC-blue.svg?maxAge=300&style=flat-square">
   </a>
-  <a href="https://en.wikipedia.org/wiki/Black_Lives_Matter">
+  <a href="https://blacklivesmatter.com/">
    <img src="https://img.shields.io/badge/✊-BlackLivesMatter-yellowgreen?style=flat-square">
   </a>
 </p>
